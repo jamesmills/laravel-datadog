@@ -1,9 +1,9 @@
 <?php
 
-namespace JamesMills\LaravelDatadog;
+namespace JamesMills\LaravelDataDog;
 
 
-use JamesMills\LaravelDatadog\Jobs\DataDogIncrement;
+use JamesMills\LaravelDataDog\Jobs\DataDogIncrement;
 
 class DataDog
 {

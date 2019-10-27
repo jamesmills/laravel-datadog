@@ -1,6 +1,6 @@
 <?php
 
-namespace JamesMills\LaravelDatadog\Jobs;
+namespace JamesMills\LaravelDataDog\Jobs;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;

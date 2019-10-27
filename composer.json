@@ -17,6 +17,19 @@
         "php": ">=7",
         "laravel/framework": "5.8.* || ^6"
     },
+    "autoload": {
+        "psr-4": {
+            "JamesMills\\LaravelDataDog\\": "src/",
+
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JamesMills\\LaravelDataDog\\LaravelDataDogServiceProvider"
+            ]
+        }
+    },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.12"
     }

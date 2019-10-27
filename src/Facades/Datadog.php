@@ -1,10 +1,10 @@
 <?php
 
-namespace JamesMills\LaravelDatadog\Facades;
+namespace JamesMills\LaravelDataDog\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Datadog extends Facade
+class DataDog extends Facade
 {
     public static function getFacadeAccessor()
     {

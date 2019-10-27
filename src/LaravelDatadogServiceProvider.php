@@ -1,11 +1,11 @@
 <?php
 
-namespace JamesMills\LaravelDatadog;
+namespace JamesMills\LaravelDataDog;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
 
-class LaravelDatadogServiceProvider extends ServiceProvider
+class LaravelDataDogServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -24,7 +24,7 @@ class LaravelDatadogServiceProvider extends ServiceProvider
     {
 
         // Register the Timezone alias
-        AliasLoader::getInstance()->alias('DataDog', \JamesMills\LaravelDatadog\Facades\Datadog::class);
+        AliasLoader::getInstance()->alias('DataDog', \JamesMills\LaravelDataDog\Facades\DataDog::class);
 
         // Allow config publish
         $this->publishes([

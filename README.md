@@ -10,15 +10,28 @@ A simple package to use DataDog Series Metric using their API via TCP
 
 Because some people cannot install the DataDog Agent or StatsD. So we have to use DataDog API to send data. Using the API losses the advantage of using UDP (unblocking) calls. This package gives you a nice way to send metric information and also make sure the jobs are queued.
 
+## Other packages
+
+This package should only be used if you also find yourslef in the unique situation where you cannot use the DataDog Agent. Make sure you investigate the below packages first.
+
+- https://github.com/DataDog/php-datadogstatsd
+- https://github.com/chaseconey/laravel-datadog-helper
+
 ## Installation
 
-Pull in the package using Composer
+Pull in the package using Composer 
 
 ```
 composer require jamesmills/laravel-datadog
 ```
 
-Set your DataDog API key in your `.env` file using the key `DATADOG_KEY` (or publish the config and use that).
+Publish the config file 
+
+```php
+php artisan vendor:publish --provider="JamesMills\LaravelDataDog\LaravelDataDogServiceProvider" --tag=config
+```
+
+Set your DataDog API key in your `.env` file using the key `DATADOG_KEY`.
 
  ## How to use
 
@@ -28,13 +41,4 @@ Set your DataDog API key in your `.env` file using the key `DATADOG_KEY` (or pub
 \DataDog::increment('app.pageview');
 ```
 
-## Custom Configuration
-
-Publishing the config file is optional. 
-
-You would only want to publish the custom config file if you wanted to set the DataDog API key differently then using the .env settings.
-
-```php
-php artisan vendor:publish --provider="JamesMills\LaravelDataDog\LaravelDataDogServiceProvider" --tag=config
-```
 

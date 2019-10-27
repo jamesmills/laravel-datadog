@@ -41,4 +41,25 @@ Set your DataDog API key in your `.env` file using the key `DATADOG_KEY`.
 \DataDog::increment('app.pageview');
 ```
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security
+
+If you discover any security related issues, please email james@jamesmills.co.uk instead of using the issue tracker.
+
+## Credits
+
+- [James Mills](https://github.com/jamesmills)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
 

@@ -30,10 +30,6 @@ class LaravelDataDogServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/datadog.php' => config_path('datadog.php'),
         ], 'config');
-
-
-
-
     }
 
     /**
@@ -43,6 +39,7 @@ class LaravelDataDogServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind('datadog', DataDog::class);
         $this->app->bind('datadogclient', DataDogClient::class);
     }
 }

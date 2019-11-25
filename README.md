@@ -41,6 +41,19 @@ Set your DataDog API key in your `.env` file using the key `DATADOG_KEY`.
 \DataDog::increment('app.pageview');
 ```
 
+### Increment a Metric with tagging and Host
+
+A powerful feature of DataDog is the ability to tag things.
+
+```php
+\DataDog::increment('app.pageview', ['my:tag:one', 'my:tag:two']);
+```
+
+You can also send a custom host if you require.
+```php
+\DataDog::increment('app.pageview', ['my:tag:one', 'my:tag:two'], 'my.host.com');
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

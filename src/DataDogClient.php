@@ -17,9 +17,9 @@ class DataDogClient
         $series = [
             'metric' => $metric,
             'points' => [
-                array(time(), 1)
+                array(time(), 1),
             ],
-            'type' => 'count'
+            'type' => 'count',
         ];
 
         if (!empty($tags)) {
@@ -33,11 +33,13 @@ class DataDogClient
 
 //        dd($series);
 
-        $this->client->post(config('datadog.host') . 'series?api_key=' . config('datadog.api_key'),
+        $this->client->post(
+            config('datadog.host') . 'series?api_key=' . config('datadog.api_key'),
             [
                 RequestOptions::JSON => [
-                    'series' => [$series]
-                ]
-            ]);
+                    'series' => [$series],
+                ],
+            ]
+        );
     }
 }

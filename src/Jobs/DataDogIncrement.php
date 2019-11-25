@@ -14,15 +14,19 @@ class DataDogIncrement implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     protected $metric;
+    protected $tags;
+    protected $host;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($metric)
+    public function __construct($metric, $tags, $host)
     {
         $this->metric = $metric;
+        $this->tags = $tags;
+        $this->host = $host;
     }
 
     /**
@@ -32,6 +36,6 @@ class DataDogIncrement implements ShouldQueue
      */
     public function handle()
     {
-        app('datadogclient')->increment($this->metric);
+        app('datadogclient')->increment($this->metric, $this->tags, $this->host);
     }
 }

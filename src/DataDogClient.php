@@ -12,20 +12,31 @@ class DataDogClient
         $this->client = new Client;
     }
 
-    public function increment($metric)
+    public function increment($metric, $tags, $host)
     {
+        $series = [
+            'metric' => $metric,
+            'points' => [
+                array(time(), 1)
+            ],
+            'type' => 'count'
+        ];
+
+        if (!empty($tags)) {
+            $series['tags'] = $tags;
+        }
+
+        if (!is_null($host)) {
+            $series['host'] = $host;
+        }
+
+
+//        dd($series);
+
         $this->client->post(config('datadog.host') . 'series?api_key=' . config('datadog.api_key'),
             [
                 RequestOptions::JSON => [
-                    'series' => [[
-                        'metric' => $metric,
-                        'points' => [
-                            array(time(), 1)
-                        ],
-                        'type' => 'count',
-                        'host' => 'test.example.com',
-                        'tags' => ['environment:test'],
-                    ]]
+                    'series' => [$series]
                 ]
             ]);
     }

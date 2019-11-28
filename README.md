@@ -3,6 +3,7 @@
 [![Packagist](https://img.shields.io/packagist/v/jamesmills/laravel-datadog.svg?style=for-the-badge)](https://packagist.org/packages/jamesmills/laravel-datadog)
 ![Packagist](https://img.shields.io/packagist/dt/jamesmills/laravel-datadog.svg?style=for-the-badge)
 [![Packagist](https://img.shields.io/packagist/l/jamesmills/laravel-datadog.svg?style=for-the-badge)]()
+[![Buy us a tree](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen?style=for-the-badge)](https://offset.earth/jamesmills)
 
 A simple package to use DataDog Series Metric using their API via TCP 
 

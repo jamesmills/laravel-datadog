@@ -30,16 +30,16 @@ class DataDogClient
             $series['host'] = $host;
         }
 
+        return retry(3, function () use ($series) {
+            $this->client->post(
+                config('datadog.host') . 'series?api_key=' . config('datadog.api_key'),
+                [
+                    RequestOptions::JSON => [
+                        'series' => [$series],
+                    ],
+                ]
+            );
+        }, 500);
 
-//        dd($series);
-
-        $this->client->post(
-            config('datadog.host') . 'series?api_key=' . config('datadog.api_key'),
-            [
-                RequestOptions::JSON => [
-                    'series' => [$series],
-                ],
-            ]
-        );
     }
 }

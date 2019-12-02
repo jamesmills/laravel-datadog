@@ -67,6 +67,14 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email james@jamesmills.co.uk instead of using the issue tracker.
 
+## Treewear
+
+You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
+
+It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to <a href="https://www.bbc.co.uk/news/science-environment-48870920">plant trees</a>. If you contribute to my forest you’ll be creating employment for local families and restoring wildlife habitats.
+
+You can buy trees at my forest here [offset.earth/jamesmills](https://offset.earth/jamesmills)
+
 ## Credits
 
 - [James Mills](https://github.com/jamesmills)

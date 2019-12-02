@@ -67,7 +67,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email james@jamesmills.co.uk instead of using the issue tracker.
 
-## Treewear
+## Treeware
 
 You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
 
